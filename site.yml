@@ -16,7 +16,6 @@
   roles:
       - geerlingguy.java
       - { role: tpbrown.gocd, tags: [ 'agent' ] }
-      - kbrebanov.virtualbox
 
   tasks:
     - { include: tasks/main.yml }

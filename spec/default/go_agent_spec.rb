@@ -13,10 +13,6 @@ describe package('unzip') do
   it { should be_installed }
 end
 
-describe package('VirtualBox-5.0') do
-  it { should be_installed }
-end
-
 describe package('python') do
   it { should be_installed.with_version('2.6.6') }
 end
