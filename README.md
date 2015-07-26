@@ -1,6 +1,6 @@
-# Ansible Role Generator
+# Ansible Go CD Agent
 
-> Generate an [Ansible](http://www.ansible.com/home) role with all the boilerplate code
+> [Ansible](http://www.ansible.com/home) role to install Go CD agent and required dependencies for my builds
 
 ## Requirements
 
