@@ -13,7 +13,10 @@ describe package('unzip') do
   it { should be_installed }
 end
 
-describe command('VBoxManage -v') do
-  its(:exit_status) { should eq 0 }
-  its(:stdout) { should match /5.0.0/ }
+describe package('VirtualBox-5.0') do
+  it { should be_installed }
+end
+
+describe package('python') do
+  it { should be_installed.with_version('2.6.6') }
 end
