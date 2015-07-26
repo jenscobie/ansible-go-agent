@@ -9,11 +9,11 @@
         - unzip
 
   vars:
-    java_packages:
-      - java-1.8.0-openjdk
+    GOCD_ADMIN_EMAIL: jenscobie@gmail.com
 
   roles:
-    - geerlingguy.java
+      - { role: tpbrown.gocd, tags: [ 'agent' ] }
 
   tasks:
-      - { include: tasks/main.yml }
+    - { include: tasks/main.yml }
+
