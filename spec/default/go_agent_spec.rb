@@ -13,6 +13,10 @@ describe package('unzip') do
   it { should be_installed }
 end
 
+describe package('wget') do
+  it { should be_installed }
+end
+
 describe package('python') do
   it { should be_installed.with_version('2.6.6') }
 end

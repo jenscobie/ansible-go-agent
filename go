@@ -32,9 +32,12 @@ function boot {
     vagrant up --no-provision
 }
 
-function provision {
+function install_roles {
     ansible-galaxy install --role-file=Galaxyfile --roles-path=roles --force
+}
 
+function provision {
+    install_roles
     boot
     vagrant provision
 }
@@ -44,6 +47,7 @@ function destroy {
 }
 
 function execute {
+    install_roles
     ansible-playbook site.yml -i hosts --private-key ~/.ssh/ec2.pem -u ec2-user
 }
 
