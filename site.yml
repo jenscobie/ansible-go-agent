@@ -5,20 +5,22 @@
     - name: Install dependencies
       yum: "name={{ item }} state=installed"
       with_items:
+        - gcc
         - libselinux-python
         - unzip
         - wget
 
   vars:
-#    java_packages:
-#      - java-1.8.0-openjdk
+    java_packages:
+      - java-1.8.0-openjdk
     GOCD_SERVER_HOST: 52.2.174.232
     GOCD_GO_VERSION: 15.2.0-2248
     GOCD_SCM_GIT: true
     GOCD_ADMIN_EMAIL: jenscobie@gmail.com
 
   roles:
-#      - geerlingguy.java
+      - geerlingguy.repo-epel
+      - geerlingguy.java
       - { role: tpbrown.gocd, tags: [ 'agent' ] }
 
   tasks:

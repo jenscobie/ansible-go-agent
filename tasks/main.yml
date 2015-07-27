@@ -1,1 +1,9 @@
 ---
+- name: Install python-devel
+  yum: name=python-devel state=present
+
+- name: Install Jinja2
+  easy_install: name=jinja2
+
+- name: Install Ansible
+  easy_install: name=ansible
